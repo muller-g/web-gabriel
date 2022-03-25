@@ -205,6 +205,11 @@
         padding-top: 160px;
     }
 
+    .lets_code{
+        left: unset;
+        bottom: 190px;
+    }
+
     .things_do a{
         margin-bottom: 60px;
     }
@@ -213,7 +218,7 @@
 @media(max-width: 360px){
     .lets_code{
         left: unset;
-        bottom: 200px;
+        bottom: 190px;
     }
 
     .name_info h1{
