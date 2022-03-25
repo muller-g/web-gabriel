@@ -16,7 +16,7 @@
     height: 30px;
     border-radius: 8px;
     padding: 0px 5px;
-    border: 1.5px solid white;
+    border: 1.5px solid #479fe7;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -25,13 +25,14 @@
 .line_1, .line_2, .line_3{
     width: 100%;
     height: 3px;
-    background-color: white;
+    background-color: #479fe7;
     border-radius: 10px;
 }
 
 .nav_header ul{
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .nav_header ul li:first-child{
@@ -51,17 +52,36 @@
 }
 
 .nav_header a img{
-    width: 30px;
+    width: 45px;
     margin-right: 10px;
 }
 
 .nav_header ul li a:hover{
     color: rgb(204, 204, 204);
+    border-bottom: 2px solid #479fe7;
+}
+
+.nav_header ul li:last-child a{
+    padding: 5px 10px;
+    background-color: #479fe7;
+    border-radius: 20px;
     transition: .3s;
 }
 
 .active{
     margin-right: 100px;
+}
+
+.menu_selected{
+    border-bottom: 2px solid #479fe7;
+    transition: .3s;
+}
+
+.nav_header ul li:last-child a:hover{
+    transition: .3s;
+    color: white;
+    transform: scale(112%);
+    text-decoration: none;
 }
 
 @media(max-width: 910px){
@@ -73,6 +93,10 @@
 @media(max-width: 414px){
     .nav_header{
         padding: 0px 20px;
+    }
+
+    .nav_header ul li a{
+        font-size: 20px;
     }
 
     .hamburger_menu{
@@ -89,7 +113,7 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
-        background-color: rgb(99, 99, 99);
+        background-color: #282c34;
         right: 0px;
         top: 0px;
         height: 100vh;

@@ -2,8 +2,9 @@ import styles from './Footer.module.css'
 
 function Footer(){
     return(
-        <footer className={styles.footer_container}>
+        <footer>
             <p>Todos os direitos reservados 2022</p>
+            <p>Desenvolvido por <span>Gabriel Müller</span></p>
         </footer>
     )
 }

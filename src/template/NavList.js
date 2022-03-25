@@ -1,10 +1,23 @@
 import styles from './NavList.module.css'
 import logo from '../img/logo.png'
-import {useState} from 'react'
 
-function NavList(){   
+function NavList(){     
+    function handleCloseMenuMob(){
+        let widthT = window.screen.width;
+        console.log(widthT)
+        let showMenu = document.querySelector('nav ul');
+        if(widthT <= 414){
+            if(showMenu.style.transform == "translateX(200%)"){
+                showMenu.style.transform = "translateX(0%)";
+            } else {
+                showMenu.style.transform = "translateX(200%)";
+            }
+        }
+    }
+    
+
     function handleCloseMenu(){
-        var showMenu = document.querySelector('.NavList_nav_header__xyzXh ul');
+        let showMenu = document.querySelector('nav ul');
         if(showMenu.style.transform == "translateX(200%)"){
             showMenu.style.transform = "translateX(0%)";
         } else {
@@ -13,8 +26,8 @@ function NavList(){
     }
 
     function handleOnClick(){
-        var hamburger = document.querySelector('.NavList_hamburger_menu__Q23sr');
-        var showMenu = document.querySelector('.NavList_nav_header__xyzXh ul');
+        let hamburger = document.querySelector('.NavList_hamburger_menu__dNIBo');
+        let showMenu = document.querySelector('nav ul');
         if(hamburger.style.marginRight == "80px"){
             hamburger.style.marginRight = "0px"
             showMenu.style.transform = "translateX(200%)";
@@ -25,12 +38,13 @@ function NavList(){
 
     return(
         <nav className={styles.nav_header}>
-            <a href="#"><img src={logo}/></a>
+            <a href="#ola"><img src={logo}/></a>
             <ul>
                 <li><a href="#" onClick={handleCloseMenu}>X</a></li>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>      
-                <li><a href="#">Contato</a></li>      
+                <li><a href="#ola" onClick={handleCloseMenuMob}>Olá</a></li>
+                <li><a href="#ajuda" onClick={handleCloseMenuMob}>Você precisa de um site?</a></li>      
+                <li><a href="#eu-faco" onClick={handleCloseMenuMob}>Eu faço</a></li>      
+                <li><a href="#contato" onClick={handleCloseMenuMob}>Me chama</a></li>      
             </ul>
             <div className={styles.hamburger_menu} onClick={handleOnClick}>
                 <div className={styles.hamburger}>
